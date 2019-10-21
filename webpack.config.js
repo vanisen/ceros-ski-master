@@ -1,5 +1,7 @@
 const path = require('path');
-const htmlWebpackPlugin = require('html-webpack-plugin')
+const htmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+
 require("@babel/register");
 
 // Webpack Configuration
@@ -13,7 +15,7 @@ const config = {
     },
 
     module: {
-        rules : [
+        rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -34,7 +36,10 @@ const config = {
         new htmlWebpackPlugin({
             title: 'Ceros Ski',
             template: './src/index.html'
-        })
+        }),
+        new CopyPlugin([
+            { from: 'img', to: 'img' }
+        ])
     ],
 };
 
