@@ -1,0 +1,95 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.overlay p {
+  font-family: sans-serif;
+  font-size: 20px;
+  display: inline-block;
+  border: 1px solid;
+  padding: 20px;
+  transform: skew(-20deg, 0);
+  font-weight: bold;
+}
+
+.overlay p span {
+  display: block;
+  transform: skew(20deg, 0);
+}
+
+.overlay h2 {
+  font-size: 60px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+}
+
+#hud-overlay p {
+  margin: 11px 0;
+}
+
+#hud-overlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 1px solid #1ba1e0;
+  border-bottom: 1px solid #1ba1e0;
+  padding: 0 12px;
+  background: rgba(37, 109, 173, 0.3);
+  font-weight: bold;
+  border-radius: 0 0 0 10px;
+}
+
+#score-overlay p {
+  margin: 0;
+  font-size: 16px;
+  padding: 5px;
+  border: 2px dashed #000;
+  text-transform: uppercase;
+  background: black;
+  color: white;
+}
+
+#over-overlay,
+#pause-overlay {
+  text-align: center;
+  padding-top: 100px;
+}
+
+#pause-overlay h2 {
+  color: #f3e535;
+}
+
+#pause-overlay p {
+  color: #f3e535;
+  background: #000;
+}
+
+#over-overlay {
+  background: rgba(255, 0, 0, 0.4);
+}
+
+#over-overlay h2 {
+  color: black;
+}
+
+#over-overlay p {
+  color: red;
+  background: #000;
+}
